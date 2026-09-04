@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Modern personal portfolio website" />
+  <title>Manu | Creative Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ================= LOADING SCREEN ================= -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <div class="loader__logo">M<span>.</span></div>
+      <div class="loader__track"><span id="loaderBar"></span></div>
+      <p>Crafting experience <span id="loaderCount">0</span>%</p>
+    </div>
+  </div>
+
+  <!-- Ambient background decorations -->
+  <div class="noise"></div>
+  <div class="orb orb--one"></div>
+  <div class="orb orb--two"></div>
+
+  <!-- ================= NAVIGATION ================= -->
+  <header class="site-header" id="siteHeader">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a href="#home" class="brand" aria-label="Homepage">M<span>.</span></a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav__menu" id="navMenu">
+        <a href="#home" class="nav__link active">Home</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#skills" class="nav__link">Skills</a>
+        <a href="#projects" class="nav__link">Projects</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </div>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">
+        <span class="theme-toggle__icon">☾</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero section" id="home">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow hero-animate">HELLO, I’M</p>
+          <h1 class="hero__title hero-animate">
+            Manu <span class="gradient-text">M.R.</span>
+          </h1>
+          <h2 class="hero__role hero-animate">CSE Student & Front-End Developer</h2>
+          <p class="hero__tagline hero-animate">
+            I build bold, responsive digital experiences with clean code, thoughtful interactions,
+            and a strong eye for modern design.
+          </p>
+
+          <div class="hero__actions hero-animate">
+            <a href="#projects" class="btn btn--primary">View my work <span>↗</span></a>
+            <a href="#contact" class="btn btn--ghost">Let’s connect</a>
+          </div>
+
+          <div class="hero__meta hero-animate">
+            <div><strong>03+</strong><span>Core Skills</span></div>
+            <div><strong>100%</strong><span>Vanilla Code</span></div>
+            <div><strong>∞</strong><span>Curiosity</span></div>
+          </div>
+        </div>
+
+        <div class="hero__visual hero-animate" aria-hidden="true">
+          <div class="visual-card">
+            <div class="visual-card__top">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="visual-card__code">
+              <p><span class="code-purple">const</span> developer = {</p>
+              <p>&nbsp;&nbsp;name: <span class="code-green">"Manu"</span>,</p>
+              <p>&nbsp;&nbsp;focus: <span class="code-green">"Web Experiences"</span>,</p>
+              <p>&nbsp;&nbsp;skills: [<span class="code-green">"HTML"</span>, <span class="code-green">"CSS"</span>, <span class="code-green">"JavaScript"</span>],</p>
+              <p>&nbsp;&nbsp;status: <span class="code-green">"Building cool stuff"</span></p>
+              <p>};</p>
+            </div>
+            <div class="visual-card__badge">AVAILABLE FOR OPPORTUNITIES</div>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#about" aria-label="Scroll to about section">
+        <span>Scroll</span><i></i>
+      </a>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section section--alt" id="about">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">01 / ABOUT</p>
+          <h2>More than just <span class="gradient-text">code.</span></h2>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__photo-wrap reveal reveal--left">
+            <div class="about__photo">
+              <!-- Profile photo: replace profile.jpg with another image if needed. -->
+              <img class="profile-photo" src="profile.jpg" alt="Manu M.R. profile photo" />
+            </div>
+            <div class="about__stamp">DESIGN • CODE • CREATE</div>
+          </div>
+
+          <div class="about__content reveal reveal--right">
+            <p class="about__lead">
+              I’m a Computer Science student who enjoys turning ideas into polished,
+              interactive websites.
+            </p>
+            <p>
+              I care about strong visual hierarchy, responsive layouts, smooth interactions,
+              and code that stays readable as projects grow. My goal is simple: create digital
+              experiences that feel intentional—not generic.
+            </p>
+            <p>
+              When I’m not coding, I’m usually learning new development concepts, exploring
+              creative design ideas, or working on projects that sharpen my problem-solving skills.
+            </p>
+
+            <div class="about__facts">
+              <div><span>Location</span><strong>India</strong></div>
+              <div><span>Focus</span><strong>Front-End Development</strong></div>
+              <div><span>Education</span><strong>B.Tech CSE</strong></div>
+              <div><span>Open to</span><strong>Internships & Projects</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">02 / SKILLS</p>
+          <h2>Tools I use to build <span class="gradient-text">experiences.</span></h2>
+        </div>
+
+        <div class="skills__grid">
+          <article class="skill-card reveal">
+            <div class="skill-card__number">01</div>
+            <div class="skill-card__icon">&lt;/&gt;</div>
+            <h3>HTML</h3>
+            <p>Semantic, accessible markup and clean page structure.</p>
+            <div class="skill-meter"><span style="--level: 92%"></span></div>
+            <div class="skill-tags"><span>Semantic</span><span>SEO</span><span>Accessibility</span></div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-card__number">02</div>
+            <div class="skill-card__icon">#</div>
+            <h3>CSS</h3>
+            <p>Responsive layouts, animation, modern visual systems, and polish.</p>
+            <div class="skill-meter"><span style="--level: 88%"></span></div>
+            <div class="skill-tags"><span>Grid</span><span>Flexbox</span><span>Animation</span></div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-card__number">03</div>
+            <div class="skill-card__icon">JS</div>
+            <h3>JavaScript</h3>
+            <p>Interactive interfaces, DOM logic, validation, and dynamic behavior.</p>
+            <div class="skill-meter"><span style="--level: 78%"></span></div>
+            <div class="skill-tags"><span>DOM</span><span>ES6+</span><span>APIs</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section section--alt" id="projects">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">03 / PROJECTS</p>
+          <h2>Selected work & <span class="gradient-text">experiments.</span></h2>
+        </div>
+
+        <div class="projects__grid">
+          <article class="project-card reveal">
+            <div class="project-card__image project-image--one">
+              <div class="project-card__overlay">01</div>
+              <span class="project-card__label">WEB DESIGN</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__topline"><h3>Rogue Force</h3><span>2026</span></div>
+              <p>A cinematic automotive landing page concept focused on bold visuals and responsive UI.</p>
+              <div class="project-card__tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+              <div class="project-card__links">
+                <a href="#" aria-label="Open Rogue Force live demo">Live demo ↗</a>
+                <a href="#" aria-label="Open Rogue Force GitHub repository">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card__image project-image--two">
+              <div class="project-card__overlay">02</div>
+              <span class="project-card__label">DASHBOARD</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__topline"><h3>Pollution Pulse</h3><span>2026</span></div>
+              <p>A clean environmental data dashboard concept for tracking pollution and air quality.</p>
+              <div class="project-card__tech"><span>HTML</span><span>CSS Grid</span><span>JS</span></div>
+              <div class="project-card__links">
+                <a href="#" aria-label="Open Pollution Pulse live demo">Live demo ↗</a>
+                <a href="#" aria-label="Open Pollution Pulse GitHub repository">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card__image project-image--three">
+              <div class="project-card__overlay">03</div>
+              <span class="project-card__label">PORTFOLIO</span>
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__topline"><h3>Personal Portfolio</h3><span>2026</span></div>
+              <p>A premium personal site featuring smooth motion, dark mode, and responsive interactions.</p>
+              <div class="project-card__tech"><span>HTML</span><span>CSS</span><span>Vanilla JS</span></div>
+              <div class="project-card__links">
+                <a href="#">Live demo ↗</a><a href="#">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">04 / CONTACT</p>
+          <h2>Have an idea? <span class="gradient-text">Let’s build it.</span></h2>
+        </div>
+
+        <div class="contact__grid">
+          <div class="contact__intro reveal reveal--left">
+            <p class="contact__big">I’m always open to learning, collaborating, and working on meaningful projects.</p>
+            <p>Replace the placeholder links below with your real GitHub, LinkedIn, email, or other social profiles.</p>
+
+            <div class="social-links">
+              <a href="https://github.com/manumr7483-ops" target="_blank" rel="noopener noreferrer"><span>GitHub</span><strong>↗</strong></a>
+              <a href="https://www.linkedin.com/in/manu-m-r-aa01a63b6?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><strong>↗</strong></a>
+              <a href="mailto:manu7483@gmail.com"><span>Email</span><strong>↗</strong></a>
+            </div>
+          </div>
+
+          <form class="contact-form reveal reveal--right" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" autocomplete="name" />
+              <small class="form-error"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" />
+              <small class="form-error"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."></textarea>
+              <small class="form-error"></small>
+            </div>
+
+            <button type="submit" class="btn btn--primary form-submit">Send message <span>↗</span></button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Manu M.R. Crafted with HTML, CSS & JavaScript.</p>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
